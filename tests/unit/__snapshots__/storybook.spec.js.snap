@@ -1,122 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Task Archived 1`] = `
-<div
-  class="list-item TASK_ARCHIVED"
->
-  <label
-    class="checkbox"
-  >
-    <input
-      disabled="disabled"
-      name="checked"
-      type="checkbox"
-    />
-     
-    <span
-      class="checkbox-custom"
-    />
-  </label>
-   
-  <div
-    class="title"
-  >
-    <input
-      placeholder="Input title"
-      readonly="readonly"
-      type="text"
-    />
-  </div>
-   
-  <div
-    class="actions"
-  >
-    <!---->
-  </div>
-</div>
-`;
-
-exports[`Storyshots Task Default 1`] = `
-<div
-  class="list-item TASK_INBOX"
->
-  <label
-    class="checkbox"
-  >
-    <input
-      disabled="disabled"
-      name="checked"
-      type="checkbox"
-    />
-     
-    <span
-      class="checkbox-custom"
-    />
-  </label>
-   
-  <div
-    class="title"
-  >
-    <input
-      placeholder="Input title"
-      readonly="readonly"
-      type="text"
-    />
-  </div>
-   
-  <div
-    class="actions"
-  >
-    <a>
-      <span
-        class="icon-star"
-      />
-    </a>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Task Pinned 1`] = `
-<div
-  class="list-item TASK_PINNED"
->
-  <label
-    class="checkbox"
-  >
-    <input
-      disabled="disabled"
-      name="checked"
-      type="checkbox"
-    />
-     
-    <span
-      class="checkbox-custom"
-    />
-  </label>
-   
-  <div
-    class="title"
-  >
-    <input
-      placeholder="Input title"
-      readonly="readonly"
-      type="text"
-    />
-  </div>
-   
-  <div
-    class="actions"
-  >
-    <a>
-      <span
-        class="icon-star"
-      />
-    </a>
-  </div>
-</div>
-`;
-
-exports[`Storyshots TaskList Default 1`] = `
+exports[`Storyshots PureTaskList Default 1`] = `
 <div
   style="padding: 3rem;"
 >
@@ -349,7 +233,7 @@ exports[`Storyshots TaskList Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots TaskList Empty 1`] = `
+exports[`Storyshots PureTaskList Empty 1`] = `
 <div
   style="padding: 3rem;"
 >
@@ -379,7 +263,7 @@ exports[`Storyshots TaskList Empty 1`] = `
 </div>
 `;
 
-exports[`Storyshots TaskList Loading 1`] = `
+exports[`Storyshots PureTaskList Loading 1`] = `
 <div
   style="padding: 3rem;"
 >
@@ -528,7 +412,7 @@ exports[`Storyshots TaskList Loading 1`] = `
 </div>
 `;
 
-exports[`Storyshots TaskList With Pinned Tasks 1`] = `
+exports[`Storyshots PureTaskList With Pinned Tasks 1`] = `
 <div
   style="padding: 3rem;"
 >
@@ -757,6 +641,122 @@ exports[`Storyshots TaskList With Pinned Tasks 1`] = `
         </a>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Task Archived 1`] = `
+<div
+  class="list-item TASK_ARCHIVED"
+>
+  <label
+    class="checkbox"
+  >
+    <input
+      disabled="disabled"
+      name="checked"
+      type="checkbox"
+    />
+     
+    <span
+      class="checkbox-custom"
+    />
+  </label>
+   
+  <div
+    class="title"
+  >
+    <input
+      placeholder="Input title"
+      readonly="readonly"
+      type="text"
+    />
+  </div>
+   
+  <div
+    class="actions"
+  >
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots Task Default 1`] = `
+<div
+  class="list-item TASK_INBOX"
+>
+  <label
+    class="checkbox"
+  >
+    <input
+      disabled="disabled"
+      name="checked"
+      type="checkbox"
+    />
+     
+    <span
+      class="checkbox-custom"
+    />
+  </label>
+   
+  <div
+    class="title"
+  >
+    <input
+      placeholder="Input title"
+      readonly="readonly"
+      type="text"
+    />
+  </div>
+   
+  <div
+    class="actions"
+  >
+    <a>
+      <span
+        class="icon-star"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Task Pinned 1`] = `
+<div
+  class="list-item TASK_PINNED"
+>
+  <label
+    class="checkbox"
+  >
+    <input
+      disabled="disabled"
+      name="checked"
+      type="checkbox"
+    />
+     
+    <span
+      class="checkbox-custom"
+    />
+  </label>
+   
+  <div
+    class="title"
+  >
+    <input
+      placeholder="Input title"
+      readonly="readonly"
+      type="text"
+    />
+  </div>
+   
+  <div
+    class="actions"
+  >
+    <a>
+      <span
+        class="icon-star"
+      />
+    </a>
   </div>
 </div>
 `;
