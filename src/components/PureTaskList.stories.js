@@ -1,5 +1,5 @@
 import PureTaskList from './PureTaskList';
-import * as TaskStories from './Task.stories';
+import * as TaskStories from './Task.stories.mdx';
 
 export default {
   component: PureTaskList,
@@ -17,7 +17,7 @@ const Template = (args, { argTypes }) => ({
 export const Default = Template.bind({});
 Default.args = {
   tasks: [1, 2, 3, 4, 5, 6].map((id) => ({
-    ...TaskStories.Default.args.task, id: `${id}`, title: `Task ${id}`
+    ...TaskStories.defaultState.args.task, id: `${id}`, title: `Task ${id}`
   })),
 };
 

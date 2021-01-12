@@ -1,0 +1,73 @@
+import { Story, Canvas, Meta } from '@storybook/addon-docs/blocks';
+import Task from './Task.vue';
+import { action } from '@storybook/addon-actions';
+
+<Meta
+  title="Task"
+  component={Task}
+  excludeStories={/.*Data$/}
+/>
+
+export const actionsData = {
+  onPinTask: action('pin-task'),
+  onArchiveTask: action('archive-task'),
+};
+
+export const Template = (args, { argTypes }) => ({
+  components: { Task },
+  props: Object.keys(argTypes),
+  methods: actionsData,
+  template: '<Task v-bind="$props" @pin-task="onPinTask" @archive-task="onArchiveTask" />',
+});
+
+# Tasks in MDX
+
+## Default
+
+<Canvas>
+  <Story
+    name="Default State"
+    args={{
+      task: {
+        id: '1',
+        title: 'Test Task',
+        state: 'TASK_INBOX',
+        updatedAt: new Date(2018, 0, 1, 9, 0),
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Pinned
+
+<Canvas>
+  <Story
+    name="Pinned"
+    args={{
+      task: {
+        ...defaultState.args.task,
+        state: 'TASK_PINNED',
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Archived
+
+<Canvas>
+  <Story
+    name="Archived"
+    args={{
+      task: {
+        ...defaultState.args.task,
+        state: 'TASK_ARCHIVED',
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
