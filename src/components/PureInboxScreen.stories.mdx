@@ -5,27 +5,28 @@ import PureInboxScreen from './PureInboxScreen';
 import { action } from '@storybook/addon-actions';
 import * as TaskListStories from './PureTaskList.stories.mdx';
 
+export const store = (() => {
+  Vue.use(Vuex);
+  return new Vuex.Store({
+    state: {
+      tasks: TaskListStories.defaultList.args.tasks,
+    },
+    actions: {
+      pinTask(context, id) {
+        action('pin-task')(id);
+      },
+      archiveTask(context, id) {
+        action('archive-task')(id);
+      },
+    },
+  });
+})();
+
 <Meta
   title="PureInboxScreen"
   component={PureInboxScreen}
   excludeStories={/.*store$/}
 />
-
-Vue.use(Vuex);
-
-export const store = new Vuex.Store({
-  state: {
-    tasks: TaskListStories.defaultList.args.tasks,
-  },
-  actions: {
-    pinTask(context, id) {
-      action('pin-task')(id);
-    },
-    archiveTask(context, id) {
-      action('archive-task')(id);
-    },
-  },
-});
 
 export const Template = (args, { argTypes }) => ({
   components: { PureInboxScreen },
