@@ -2,13 +2,13 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import PureInboxScreen from './PureInboxScreen';
 import { action } from '@storybook/addon-actions';
-import * as TaskListStories from './PureTaskList.stories';
+import * as TaskListStories from './PureTaskList.stories.mdx';
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    tasks: TaskListStories.Default.args.tasks,
+    tasks: TaskListStories.defaultList.args.tasks,
   },
   actions: {
     pinTask(context, id) {

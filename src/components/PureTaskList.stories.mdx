@@ -1,0 +1,65 @@
+import { Story, Canvas, Meta } from '@storybook/addon-docs/blocks';
+import PureTaskList from './PureTaskList';
+import * as TaskStories from './Task.stories.mdx';
+
+<Meta
+  title="PureTaskList"
+  component={PureTaskList}
+  decorators={[() => '<div style="padding: 3rem;"><story /></div>']}
+/>
+
+export const Template = (args, { argTypes }) => ({
+  components: { PureTaskList },
+  props: Object.keys(argTypes),
+  methods: TaskStories.actionsData,
+  template: '<PureTaskList v-bind="$props" @pin-task="onPinTask" @archive-task="onArchiveTask" />',
+});
+
+# Example Task Lists
+
+## Default
+
+<Canvas>
+  <Story
+    name="Default List"
+    args={{
+      tasks: [1, 2, 3, 4, 5, 6].map((id) => ({
+        ...TaskStories.defaultState.args.task, id: `${id}`, title: `Task ${id}`
+      }))
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## With pinned tasks
+
+<Canvas>
+  <Story
+    name="With Pinned Tasks"
+    args={{
+      tasks: [
+        ...defaultList.args.tasks.slice(0, 5),
+        { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
+      ]
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## List is loading
+
+<Canvas>
+  <Story name="Loading" args={{ tasks: [], loading: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## List is empty
+
+<Canvas>
+  <Story name="Empty" args={{ ...loading.args, loading: false }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
