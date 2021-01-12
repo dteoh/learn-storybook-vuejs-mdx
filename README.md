@@ -1,5 +1,10 @@
 # taskbox
 
+This is the Vue.js MDX version of "[Learn Storybook](https://www.learnstorybook.com/intro-to-storybook/vue/en/get-started/)".
+
+All the stories in this repo were first written in JavaScript (`*.stories.js`) 
+and then converted into MDX (`*.stories.mdx`).
+
 ## Project setup
 ```
 yarn install
