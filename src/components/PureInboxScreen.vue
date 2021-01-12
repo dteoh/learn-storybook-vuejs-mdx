@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import TaskList from './TaskList';
+import TaskList from "./TaskList";
 
 export default {
-  name: 'PureInboxScreen',
+  name: "PureInboxScreen",
   components: { TaskList },
   props: {
-    error: { type: Boolean, default: false },
-  },
+    error: { type: Boolean, default: false }
+  }
 };
 </script>

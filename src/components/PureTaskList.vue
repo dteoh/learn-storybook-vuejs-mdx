@@ -20,31 +20,36 @@
     </template>
 
     <template v-else>
-      <Task v-for="task in tasksInOrder" :key="task.id" :task="task" v-on="$listeners" />
+      <Task
+        v-for="task in tasksInOrder"
+        :key="task.id"
+        :task="task"
+        v-on="$listeners"
+      />
     </template>
   </div>
 </template>
 
 <script>
-import Task from './Task';
+import Task from "./Task";
 
 export default {
-  name: 'PureTaskList',
+  name: "PureTaskList",
   components: { Task },
   props: {
     tasks: { type: Array, required: true, default: () => [] },
-    loading: { type: Boolean, default: false },
+    loading: { type: Boolean, default: false }
   },
   computed: {
     tasksInOrder() {
       return [
-        ...this.tasks.filter(t => t.state === 'TASK_PINNED'),
-        ...this.tasks.filter(t => t.state !== 'TASK_PINNED'),
+        ...this.tasks.filter(t => t.state === "TASK_PINNED"),
+        ...this.tasks.filter(t => t.state !== "TASK_PINNED")
       ];
     },
     isEmpty() {
       return this.tasks.length === 0;
-    },
-  },
+    }
+  }
 };
 </script>

@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import PureTaskList from './PureTaskList';
-import { mapState, mapActions } from 'vuex';
+import PureTaskList from "./PureTaskList";
+import { mapState, mapActions } from "vuex";
 
 export default {
   components: { PureTaskList },
-  methods: mapActions(['archiveTask', 'pinTask']),
-  computed: mapState(['tasks']),
+  methods: mapActions(["archiveTask", "pinTask"]),
+  computed: mapState(["tasks"])
 };
 </script>

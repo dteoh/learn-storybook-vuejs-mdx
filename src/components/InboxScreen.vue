@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import PureInboxScreen from './PureInboxScreen';
-import { mapState } from 'vuex';
+import PureInboxScreen from "./PureInboxScreen";
+import { mapState } from "vuex";
 
 export default {
-  name: 'InboxScreen',
+  name: "InboxScreen",
   components: { PureInboxScreen },
-  computed: mapState(['error']),
+  computed: mapState(["error"])
 };
 </script>
